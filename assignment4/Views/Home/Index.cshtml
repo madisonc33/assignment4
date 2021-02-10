@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Top 5 Restuarants";
+}
+
+@model IEnumerable<string>
+
+@*Uses bootstrap for styling for the sub header and the table*@
+<h6 class="font-weight-bold text-center">The best restuarants of all time according to Madison Corbin</h6>
+<ul class="list-group">
+  @foreach (string i in Model)
+  {
+      <li class="list-group-item text-center">@Html.Raw(i)</li>
+  }
+</ul>
