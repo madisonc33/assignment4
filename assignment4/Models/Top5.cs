@@ -4,7 +4,7 @@ namespace assignment4.Models
 {
     public class Top5
     {
-        public Top5(int rank)
+        public Top5(int rank) //makes the rank read only because it can only be set when first created
         {
             Rank = rank;
         }
