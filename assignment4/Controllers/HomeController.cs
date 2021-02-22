@@ -24,7 +24,8 @@ namespace assignment4.Controllers
 
             foreach(Top5 r in Top5.GetTop5s())
             {
-                restList.Add("#" + r.Rank + " - " + r.Name + " " + "<br />Favorite Dish: " + r.FavDish + "<br />" + r.Address + "<br />" + r.Phone + "<br />" + r.Website);
+                string favDish = r.FavoriteDish ?? “It’s all tasty!”
+                restList.Add("#" + r.Rank + " - " + r.Name + " " + "<br />Favorite Dish: " + FavDish + "<br />" + r.Address + "<br />" + r.Phone + "<br />" + r.Website);
             }
             return View(restList);
         }
